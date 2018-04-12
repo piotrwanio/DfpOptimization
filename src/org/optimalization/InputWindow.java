@@ -41,7 +41,8 @@ public class InputWindow implements ActionListener {
     private static final int N = 1000;
 	JTextArea resultsArea;
 	JTextField inputField;
-
+	
+ // creating new window
 	public void createWindow() {
 		JFrame f = new JFrame();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
