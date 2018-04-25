@@ -9,11 +9,13 @@ import org.jfree.chart.renderer.PaintScale;
 import org.jfree.chart.renderer.xy.XYBlockRenderer;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.chart.title.PaintScaleLegend;
+import org.jfree.data.Range;
 import org.jfree.data.xy.*;
 import org.jfree.ui.RectangleEdge;
 import org.jfree.ui.RectangleInsets;
 import org.mariuszgromada.math.mxparser.Expression;
 import org.mariuszgromada.math.mxparser.Function;
+import org.mariuszgromada.math.mxparser.mXparser;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,15 +24,17 @@ import java.awt.event.ActionListener;
 
 public class InputWindow implements ActionListener {
 
-    private static final int N = 100;
+    private static final int N = 50;
     static double MAX = 1;
     static double MIN = 0;
+    static double range = 3;
     JTextArea resultsArea;
     JTextField inputField, eField;
     ChartPanel chartPanel;
     static Function f;
     XYZDataset dataset;
     JFreeChart chart;
+    private String sampleFunction;
 
     // creating new window
     public void createWindow() {
@@ -60,12 +64,28 @@ public class InputWindow implements ActionListener {
         f.getContentPane().add(BorderLayout.WEST, tabbedPane);
         inputField = new JTextField(20);
         inputField.setMaximumSize(inputField.getPreferredSize());
-        JLabel label = new JLabel("Wprowadź funkcję:");
+        JLabel label = new JLabel("Wprowadź funkcję testową:");
         label.setForeground(Color.white);
         eField = new JTextField(20);
         inputField.setMaximumSize(eField.getPreferredSize());
-        JLabel elabel = new JLabel("Wprowadź kryterium stopu:");
+        JLabel elabel = new JLabel("Lub wybierz funkcję testową z listy:");
         elabel.setForeground(Color.white);
+
+        //Create sample function list
+        String[] functionSamples = {"Wybierz funkcję", "f(x1,x2)=x1^2+x2^2", "xxx", "yyy"};
+
+        //Create the combo box, select item at index 0
+        JComboBox functionList = new JComboBox(functionSamples);
+        functionList.setSelectedIndex(0);
+        functionList.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                JComboBox cb = (JComboBox)arg0.getSource();
+                String choosedFunction = (String)cb.getSelectedItem();
+                System.out.println("button A Action");
+                sampleFunction = choosedFunction;
+            }
+        });
 
         JButton inputButton = new JButton("Zatwierdź");
         inputButton.setForeground(Color.white);
@@ -113,7 +133,8 @@ public class InputWindow implements ActionListener {
         c.weightx = 1.0;
         c.gridx = 1;
         c.gridy = 2;
-        leftPanel.add(eField, c);
+    //    leftPanel.add(eField, c);
+        leftPanel.add(functionList, c);
 
         // leftPanel.add(inputField);
         // c.fill = GridBagConstraints.BOTH;
@@ -149,7 +170,8 @@ public class InputWindow implements ActionListener {
                 return new Dimension(640, 480);
             }
         };
-        chartPanel.setMouseZoomable(true, false);
+        chartPanel.setMouseZoomable(true, true);
+        chartPanel.setMouseWheelEnabled(true);
         f.getContentPane().add(chartPanel);
         f.setSize(1000, 400);
         f.setVisible(true);
@@ -159,6 +181,12 @@ public class InputWindow implements ActionListener {
     private static JFreeChart createChart(XYDataset dataset) {
         NumberAxis xAxis = new NumberAxis("x");
         NumberAxis yAxis = new NumberAxis("y");
+        Range range = new Range(-5,-2);
+        yAxis.setDefaultAutoRange(range);
+       // yAxis.setRange(range);
+     //   xAxis.setRange(range);
+        yAxis.setAutoRangeIncludesZero(false);
+        xAxis.setAutoRangeIncludesZero(false);
         XYDataset dataset0 = createSampleDataset();
         XYPlot plot = new XYPlot();
         plot.setDomainAxis(xAxis);
@@ -173,17 +201,19 @@ public class InputWindow implements ActionListener {
         XYBlockRenderer r = new XYBlockRenderer();
         SpectrumPaintScale ps = new SpectrumPaintScale(0, MAX);
         r.setPaintScale(ps);
-        r.setBlockHeight(1f);
-        r.setBlockWidth(1f);
-        r.setSeriesVisible(0, true);
+        r.setBlockHeight(0.1f);
+        r.setBlockWidth(0.1f);
+     //   r.setSeriesVisible(0, true);
 
         /// setting datasets
-        plot.setDataset(0, dataset0);
+    //  plot.setDataset(0, dataset0);
         plot.setDataset(1, dataset);
 
         /// setting renderer for each dataset
         plot.setRenderer(1, r);
-//		plot.setRenderer(0, renderer2);
+	//	plot.setRenderer(0, renderer2);
+
+
 
         JFreeChart chart = new JFreeChart("Warstwica funkcji f", JFreeChart.DEFAULT_TITLE_FONT, plot, false);
         NumberAxis scaleAxis = new NumberAxis("Skala");
@@ -218,16 +248,19 @@ public class InputWindow implements ActionListener {
         return dataset;
     }
 
+
     // Creating dataset for XYBlockRenderer
     private static XYZDataset createDataset() {
         DefaultXYZDataset dataset = new DefaultXYZDataset();
+        double x0 = 0;
+        double k = ((2*range)/(double)N);
         for (int i = 0; i < N; i = i + 1) {
             double[][] data = new double[3][N];
             for (int j = 0; j < N; j = j + 1) {
-                data[0][j] = i / 5 - 10;
-                data[1][j] = j / 5 - 10;
+                data[0][j] = x0 + range - k*i;
+                data[1][j] = x0 + range - k*j;
                 if (f != null) {
-                    Expression e = new Expression("f(" + (i / 5 - 10) + "," + (j / 5 - 10) + ")", f);
+                    Expression e = new Expression("f(" + (x0 + range - k*i) + "," + (x0 + range - k*j) + ")", f);
                     data[2][j] = e.calculate();
                     if (data[2][j] > MAX) {
                         MAX = data[2][j];
@@ -236,7 +269,7 @@ public class InputWindow implements ActionListener {
                         MIN = data[2][j];
                     }
                 } else {
-                    data[2][j] = j * i / 100;
+                    data[2][j] = (double)j*(double)i/(double)N;
                     if (data[2][j] > MAX) {
                         MAX = data[2][j];
                     }
@@ -285,12 +318,17 @@ public class InputWindow implements ActionListener {
     public void actionPerformed(ActionEvent event) {
         // resultsArea.append("Wciśnięto przycisk \n");
         String inputFunction = inputField.getText();
+        System.out.println(inputFunction);
+        if(inputFunction.isEmpty()){
+            inputFunction = sampleFunction;
+            System.out.println(inputFunction);
+        }
         f = new Function(inputFunction);
-
+        System.out.println(f.toString());
         int parnum = f.getArgumentsNumber();
 
         Expression e = new Expression("f(3,2)", f);
-        // mXparser.consolePrintln("Res: " + e.getExpressionString() + "=" +
+     //   mXparser.consolePrintln("Res: " + e.getExpressionString() + "=" );
         // e.calculate());
         double result = e.calculate();
 
@@ -304,8 +342,8 @@ public class InputWindow implements ActionListener {
         //	MAX = 1000;
         SpectrumPaintScale ps = new SpectrumPaintScale(MIN, MAX);
         r.setPaintScale(ps);
-        r.setBlockHeight(1.0f);
-        r.setBlockWidth(1.0f);
+        r.setBlockHeight(2.0*range/(double)N);
+        r.setBlockWidth(2.0*range/(double)N);
         r.setSeriesVisible(0, true);
         ((XYPlot) chart.getPlot()).setRenderer(1, r);
 
@@ -323,6 +361,7 @@ public class InputWindow implements ActionListener {
         chart.clearSubtitles();
         chart.addSubtitle(legend);
         chart.setBackgroundPaint(Color.white);
+
 
         MAX = 1;
         MIN = 0;
