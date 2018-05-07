@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88356dc0-4d7c-4b44-a7f3-8397bb78e542" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/DFP_all_jar/DFP_all.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/DFP_all_jar/DFP_all.jar" afterDir="false" />
@@ -20,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/algorithm/optimization/DFP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/algorithm/optimization/DFP.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/algorithm/optimization/GolsteinSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/algorithm/optimization/GolsteinSearch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/algorithm/optimization/NumDerivs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/algorithm/optimization/NumDerivs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/algorithm/optimization/optimize.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/algorithm/optimization/optimize.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/math/Interpolator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/math/Interpolator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/math/MatrixVector/data/GaussianVector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/math/MatrixVector/data/GaussianVector.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/math/MatrixVector/data/Matrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/math/MatrixVector/data/Matrix.class" afterDir="false" />
@@ -187,7 +189,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
@@ -365,7 +367,7 @@
     <option name="totallyTimeSpent" value="69082000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
