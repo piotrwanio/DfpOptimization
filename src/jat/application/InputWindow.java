@@ -35,14 +35,15 @@ public class InputWindow implements ActionListener {
     static double[] x0;
     static double rangeX = 0;
     static double rangeY = 0;
+    static int max_iter = 30;
     boolean wasPainted = true;
     static JTextArea resultsArea;
-    JTextField inputField, eField;
+    JTextField inputField, eField, iterField, eps1Field, eps2Field, eps3Field, eps4Field, betaField;
     JTextField[] x;
     ChartPanel chartPanel;
     static Function f;
     XYZDataset dataset;
-    XYSeriesCollection pointsDataset = new XYSeriesCollection();
+    XYSeriesCollection pointsDataset;
     JFreeChart chart;
     private String sampleFunction;
 
@@ -114,14 +115,21 @@ public class InputWindow implements ActionListener {
         dfpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent arg0) {
+
+                if(iterField.getText().isEmpty()){
+                    resultsArea.append("Nie wprowadzono liczby iteracji.\n");
+                    return;
+                }
+                max_iter = Integer.parseInt(iterField.getText());
+                pointsDataset = new XYSeriesCollection();
                 String inputFunction = inputField.getText();
                 System.out.println(inputFunction);
                 if (inputFunction.isEmpty()) {
-                    inputFunction = sampleFunction;
                     if (sampleFunction == "Wybierz funkcję" || sampleFunction == null) {
                         resultsArea.append("Nie wybrano funkcji testowej.\n");
                         return;
                     }
+                    inputFunction = sampleFunction;
                     System.out.println(inputFunction);
                 }
 
@@ -141,12 +149,40 @@ public class InputWindow implements ActionListener {
                     x0[i] = Double.parseDouble(x[i].getText());
                 }
 
-                // create instance of the class
+                // create instance of the class DFP
                 DFP dfp = new DFP(function, x0);
-                dfp.err_ods = 1.e-6;
-                dfp.err_dfp = 1.e-6;
+                if(eps1Field.getText().isEmpty()){
+                    dfp.err_dfp = 1.e-5;
+                }
+                else{
+                    dfp.err_dfp = Double.parseDouble(eps1Field.getText());
+                }
+                if(eps2Field.getText().isEmpty()){
+                    dfp.eps_x = 1.e-5;
+                }
+                else{
+                    dfp.eps_x = Double.parseDouble(eps2Field.getText());
+                }
+                if(eps3Field.getText().isEmpty()){
+                    dfp.eps_fx = 1.e-5;
+                }
+                else{
+                    dfp.eps_fx = Double.parseDouble(eps3Field.getText());
+                }
+                if(betaField.getText().isEmpty()){
+                    dfp.beta = 0.4;
+                }
+                else{
+                    dfp.beta = Double.parseDouble(betaField.getText());
+                }
+                if(eps4Field.getText().isEmpty()){
+                    dfp.err_ods = 1.e-5;
+                }
+                else{
+                    dfp.err_ods = Double.parseDouble(eps4Field.getText());
+                }
                 dfp.eps_CD = 1.e-5;
-                dfp.max_it = 30;
+                dfp.max_it = max_iter;
                 double[] x = dfp.find_min_DFP(pointsDataset, resultsArea);
                 if (x == null) {
                     wasPainted = true;
@@ -257,9 +293,9 @@ public class InputWindow implements ActionListener {
             label_x[i].setForeground(Color.white);
         }
         JLabel initials = new JLabel("Wprowadź punkt początkowy:");
-        initials.setForeground(Color.white);
+        initials.setForeground(new Color(36, 73, 152));
+        initials.setFont(initials.getFont().deriveFont(15.0f));
         JLabel initials2 = new JLabel(" ");
-        initials.setForeground(Color.white);
 
         leftPanel2.setLayout(new GridBagLayout());
         GridBagConstraints c2 = new GridBagConstraints();
@@ -309,47 +345,160 @@ public class InputWindow implements ActionListener {
 
         //LeftPanel3 content
 
-        JTextField eps1Field = new JTextField(20);
+        JLabel dfpTitle = new JLabel("Parametry dla algorytmu DFP:");
+        dfpTitle.setForeground(new Color(36, 73, 152));
+        dfpTitle.setFont(dfpTitle.getFont().deriveFont(15.0f));
+
+        JLabel goldTitle = new JLabel("Parametry dla algorytmu min. w kierunku (Goldsteina):");
+        goldTitle.setForeground(new Color(36, 73, 152));
+        goldTitle.setFont(goldTitle.getFont().deriveFont(15.0f));
+
+        iterField = new JTextField(20);
+        iterField.setMaximumSize(iterField.getPreferredSize());
+        JLabel iterLabel = new JLabel("Wprowadź maksymalną liczbę iteracji:");
+        iterLabel.setForeground(Color.white);
+        eps1Field = new JTextField(20);
         eps1Field.setMaximumSize(eps1Field.getPreferredSize());
-        JLabel eps1Label = new JLabel("Wprowadź kryterium stopu:");
+        JLabel eps1Label = new JLabel("Wprowadź kryterium stopu grad:");
         eps1Label.setForeground(Color.white);
-        JTextField eps2Field = new JTextField(20);
+        eps2Field = new JTextField(20);
         eps2Field.setMaximumSize(eField.getPreferredSize());
-        JLabel eps2Label = new JLabel("Wprowadź kryterium stopu:");
+        JLabel eps2Label = new JLabel("Wprowadź kryterium stopu dla x:");
         eps2Label.setForeground(Color.white);
+        eps3Field = new JTextField(20);
+        eps3Field.setMaximumSize(eField.getPreferredSize());
+        JLabel eps3Label = new JLabel("Wprowadź kryterium stopu dla f(x):");
+        eps3Label.setForeground(Color.white);
+        eps4Field = new JTextField(20);
+        eps4Field.setMaximumSize(eField.getPreferredSize());
+        JLabel eps4Label = new JLabel("Wprowadź kryterium stopu dla min. w kierunku:");
+        eps4Label.setForeground(Color.white);
+        betaField = new JTextField(20);
+        betaField.setMaximumSize(eField.getPreferredSize());
+        JLabel betaLabel = new JLabel("Wprowadź parametr beta:");
+        betaLabel.setForeground(Color.white);
+        JLabel dummyLabel = new JLabel(" ");
+        dummyLabel.setForeground(Color.white);
+
 
         leftPanel3.setLayout(new GridBagLayout());
 
         GridBagConstraints c3 = new GridBagConstraints();
         c3.anchor = GridBagConstraints.WEST;
         //	c.fill = GridBagConstraints.HORIZONTAL;
+        GridBagConstraints w3 = new GridBagConstraints();
+        w3.anchor = GridBagConstraints.CENTER;
+
+        w3.weighty = 0.0;
+        w3.gridwidth = 6;
+        w3.gridx = 0;
+        w3.gridy = 0;
+        w3.insets = new Insets(10, 0, 0, 0);
+        leftPanel3.add(dfpTitle, w3);
 
         c3.weighty = 0.0;
         c3.gridx = 0;
-        c3.gridy = 0;
+        c3.gridy = 1;
         c3.insets = new Insets(10, 10, 0, 0);
+        leftPanel3.add(iterLabel, c3);
+
+        // c.fill = GridBagConstraints.BOTH;
+        c3.weightx = 1.0;
+        c3.weighty = 0.0;
+        c3.gridx = 1;
+        c3.gridy = 1;
+        leftPanel3.add(iterField, c3);
+
+        c3.weighty = 0.0;
+        c3.gridx = 0;
+        c3.gridy = 2;
         leftPanel3.add(eps1Label, c3);
 
         // c.fill = GridBagConstraints.BOTH;
         c3.weightx = 1.0;
         c3.weighty = 0.0;
         c3.gridx = 1;
-        c3.gridy = 0;
+        c3.gridy = 2;
         leftPanel3.add(eps1Field, c3);
 
         // c.fill = GridBagConstraints.BOTH;
         c3.weightx = 1.0;
-        c3.weighty = 1.0;
+        c3.weighty = 0;
         c3.gridx = 0;
-        c3.gridy = 2;
+        c3.gridy = 3;
         leftPanel3.add(eps2Label, c3);
 
         // c.fill = GridBagConstraints.BOTH;
         c3.weightx = 1.0;
+        c3.weighty = 0;
         c3.gridx = 1;
-        c3.gridy = 2;
+        c3.gridy = 3;
         //    leftPanel.add(eField, c);
         leftPanel3.add(eps2Field, c3);
+
+        // c.fill = GridBagConstraints.BOTH;
+        c3.weightx = 1.0;
+        c3.weighty = 0;
+        c3.gridx = 0;
+        c3.gridy = 4;
+        //    leftPanel.add(eField, c);
+        leftPanel3.add(eps3Label, c3);
+
+        // c.fill = GridBagConstraints.BOTH;
+        c3.weightx = 1.0;
+        c3.weighty = 0;
+        c3.gridx = 1;
+        c3.gridy = 4;
+        //    leftPanel.add(eField, c);
+        leftPanel3.add(eps3Field, c3);
+
+        w3.weighty = 0;
+        w3.gridwidth = 6;
+        w3.gridx = 0;
+        w3.gridy = 5;
+        w3.insets = new Insets(50, 0, 0, 0);
+        leftPanel3.add(goldTitle, w3);
+
+        // c.fill = GridBagConstraints.BOTH;
+        c3.weightx = 1.0;
+        c3.weighty = 0;
+        c3.gridx = 0;
+        c3.gridy = 6;
+        //    leftPanel.add(eField, c);
+        leftPanel3.add(eps4Label, c3);
+
+        // c.fill = GridBagConstraints.BOTH;
+        c3.weightx = 1.0;
+        c3.weighty = 0;
+        c3.gridx = 1;
+        c3.gridy = 6;
+        //    leftPanel.add(eField, c);
+        leftPanel3.add(eps4Field, c3);
+
+        // c.fill = GridBagConstraints.BOTH;
+        c3.weightx = 1.0;
+        c3.weighty = 0;
+        c3.gridx = 0;
+        c3.gridy = 7;
+        //    leftPanel.add(eField, c);
+        leftPanel3.add(betaLabel, c3);
+
+        // c.fill = GridBagConstraints.BOTH;
+        c3.weightx = 1.0;
+        c3.weighty = 0;
+        c3.gridx = 1;
+        c3.gridy = 7;
+        //    leftPanel.add(eField, c);
+        leftPanel3.add(betaField, c3);
+
+        // c.fill = GridBagConstraints.BOTH;
+        c3.weightx = 1.0;
+        c3.weighty = 1.0;
+        c3.gridx = 1;
+        c3.gridy = 8;
+        //    leftPanel.add(eField, c);
+        leftPanel3.add(dummyLabel, c3);
+
 
         //Adding chart panel
 
@@ -526,7 +675,7 @@ public class InputWindow implements ActionListener {
         System.out.println(f.toString());
         int parnum = f.getArgumentsNumber();
         if (parnum > 2) {
-            resultsArea.append("Warstwica jest rysowana tylko dla funkcji z dwoma argumentami!");
+            resultsArea.append("Warstwica jest rysowana tylko dla funkcji z dwoma argumentami!\n");
         }
 
         Expression e = new Expression("f(3,2)", f);
@@ -547,6 +696,7 @@ public class InputWindow implements ActionListener {
         /// creating renderer for line and shape chart
         XYLineAndShapeRenderer renderer2 = new XYLineAndShapeRenderer();
         renderer2.setSeriesPaint(0, Color.black);
+        renderer2.setSeriesLinesVisible(0,false);
         renderer2.setSeriesPaint(1, Color.white);
 
         /// setting lines non-visible
@@ -591,6 +741,7 @@ public class InputWindow implements ActionListener {
         }
 
         wasPainted = true;
+
     }
 
 

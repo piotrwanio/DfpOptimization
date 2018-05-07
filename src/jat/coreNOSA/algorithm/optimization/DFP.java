@@ -5,7 +5,7 @@
  * This file is part of JAT. JAT is free software; you can
  * redistribute it and/or modify it under the terms of the
  * NASA Open Source Agreement
- * 
+ *
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -34,139 +34,169 @@ import javax.swing.*;
 
 /**
  * Davidon-Fletcher-Powell variable metric method
- * @author Tobias Berthold
  *
+ * @author Tobias Berthold
  */
-public class DFP extends optimize
-{
-	public double err_ods = 1.e-4; // Error tolerance for linesearch
-	public double err_dfp = 1.e-6; // Error tolerance for search
-	public double eps_CD = 1.e-4; // Perturbation for central difference 
-	public int max_it = 50; // maximum iterations 
-	public MyFunction G;
-	XYSeries series1 = new XYSeries("kolejne_minima");
-	XYSeries series2 = new XYSeries("minimum_lokalne_funkcji");
+public class DFP extends optimize {
+    public double err_ods = 1.e-4; // Error tolerance for linesearch
+    public double eps_x = 1.e-4;
+    public double eps_fx = 1.e-6;
+    public double err_dfp = 1.e-6; // Error tolerance for search
+    public double eps_CD = 1.e-4; // Perturbation for central difference
+    public int max_it = 50; // maximum iterations
+    public double beta;
+    public MyFunction G;
+    XYSeries series1 = new XYSeries("kolejne_minima");
+    XYSeries series2 = new XYSeries("minimum_lokalne_funkcji");
 
-	public DFP(Function function, double[] x_init)
-	{
-		super(function, x_init);
-		G = new MyFunction(function);
-	}
+    public DFP(Function function, double[] x_init) {
+        super(function, x_init);
+        G = new MyFunction(function);
+    }
 
-	void DFP_update(VectorN dx, VectorN dg, Matrix H)
-	{
-		int n = dx.length;
-		VectorN H_dg = new VectorN(n);
-		double dxT_dg = 0., dgT_H_dg = 0.;
-		Matrix dx_dxT, dH, dH1, dH2, H_dg_dgT_H;
+    void DFP_update(VectorN dx, VectorN dg, Matrix H) {
+        int n = dx.length;
+        VectorN H_dg = new VectorN(n);
+        double dxT_dg = 0., dgT_H_dg = 0.;
+        Matrix dx_dxT, dH, dH1, dH2, H_dg_dgT_H;
 
-		H_dg = H.times(dg);
-		dxT_dg = dx.dotProduct(dg);     // mianownik A
-		dgT_H_dg = dg.dotProduct(H_dg); // mianownik B
-		dx_dxT = dx.outerProduct(dx);   // licznik A
-		H_dg_dgT_H = H_dg.outerProduct(H_dg); // - licznik B
+        H_dg = H.times(dg);
+        dxT_dg = dx.dotProduct(dg);     // mianownik A
+        dgT_H_dg = dg.dotProduct(H_dg); // mianownik B
+        dx_dxT = dx.outerProduct(dx);   // licznik A
+        H_dg_dgT_H = H_dg.outerProduct(H_dg); // - licznik B
 
-		dH1 = dx_dxT.ebeDivide(dxT_dg);     // A
-		dH2 = H_dg_dgT_H.ebeDivide(dgT_H_dg);   // - B
-		dH = dH1.minus(dH2); // A + B
-		H.setMatrix(0, 0, H.plus(dH));  // V + A + B = V(i+1)
-		return;
-	}
+        dH1 = dx_dxT.ebeDivide(dxT_dg);     // A
+        dH2 = H_dg_dgT_H.ebeDivide(dgT_H_dg);   // - B
+        dH = dH1.minus(dH2); // A + B
+        H.setMatrix(0, 0, H.plus(dH));  // V + A + B = V(i+1)
+        return;
+    }
 
-	public double[] find_min_DFP(XYSeriesCollection dataset, JTextArea area)
-	{
-		Matrix H = new Matrix(n); // Set H to identity matrix
-		VectorN x, xn, dx, gx, gxn, dgx;
-		double[] dummy;
-		int i, it = 0;
-		double norm = 0.;
-		boolean more_iter = true;
-		int status = 0;
+    public double[] find_min_DFP(XYSeriesCollection dataset, JTextArea area) {
+        Matrix H = new Matrix(n); // Set H to identity matrix
+        VectorN x, xn, dx, gx, gxn, dgx, krytx;
+        double[] dummy;
+        int i, it = 0;
+        double norm = 0., normx = 0., normfx = 0.;
+        boolean more_iter = true;
+        int status = 0;
 
-		// Copy initial guess to x
-		x = new VectorN(x_init);
-		xn = new VectorN(x_init);
-		gxn = new VectorN(x_init);
-		//copy(x_init, this.x);
-		print_header();
+        // Copy initial guess to x
+        x = new VectorN(x_init);
+        xn = new VectorN(x_init);
+        gxn = new VectorN(x_init);
+        //copy(x_init, this.x);
+        print_header();
 
-		gx = new VectorN(NumDerivs.G_x_central(G, x.getArray(), eps_CD)); // robi gradient
-		while (more_iter)
-		{
-			norm = norm(gx.getArray());
-			if (norm < err_dfp)
-			{
-				more_iter = false;
-				if(Double.isNaN( G.evaluate(x.getArray()))){
-					return null;
-				}
-				print_line(dataset, area,it, x.getArray(), G.evaluate(x.getArray()), gx.getArray(), norm);
-			} else
-			{
-				// Step 4
-				dx = H.times(gx);      ///
-				dx = dx.times(-1.);    /// d(i)
-				//H.print("H");
-				copy(x.getArray(), xn.getArray());
-				xn = GolsteinSearch.ods(G, gx, xn, dx, err_ods);
-				if(Double.isNaN( G.evaluate(x.getArray()))){
-					return null;
-				}
-				print_line(dataset, area,it, x.getArray(), G.evaluate(x.getArray()), gx.getArray(), norm);
-				if(x.length == 2) series1.add(x.getArray()[0],x.getArray()[1]);
-				// Step 5
-				dx = xn.minus(x);
-				// Step 6
-				gxn = new VectorN(NumDerivs.G_x_central(G, xn.getArray(), eps_CD));
-				dgx = gxn.minus(gx); // dgx = gxn - gx
-				// Step 7
-				DFP_update(dx, dgx, H);
-				// Step 8
-				copy(xn, x);
-				copy(gxn, gx);
-				it++;
-				if (it > max_it)
-				{
-					more_iter = false;
-					status = 1;
-				}
-				if (GolsteinSearch.status > 0)
-				{
-					System.out.println("Linesearch failed, status: " + GolsteinSearch.status);
-					// x might still be minimum, check
-					more_iter = false;
-					status = 2;
-				}
-			}
-		}
+        gx = new VectorN(NumDerivs.G_x_central(G, x.getArray(), eps_CD)); // robi gradient
+        while (more_iter) {
+            norm = norm(gx.getArray());
+            if (norm < err_dfp) {
+                more_iter = false;
+                if (Double.isNaN(G.evaluate(x.getArray()))) {
+                    return null;
+                }
+                print_line(dataset, area, it, x.getArray(), G.evaluate(x.getArray()), gx.getArray(), norm);
+            } else {
+                // Step 4
+                dx = H.times(gx);      ///
+                dx = dx.times(-1.);    /// d(i)
+                //H.print("H");
+                copy(x.getArray(), xn.getArray());
+                xn = GolsteinSearch.ods(G, gx, xn, dx, err_ods, beta);
+                if (Double.isNaN(G.evaluate(x.getArray()))) {
+                    return null;
+                }
+                print_line(dataset, area, it, x.getArray(), G.evaluate(x.getArray()), gx.getArray(), norm);
+                if (x.length == 2) series1.add(x.getArray()[0], x.getArray()[1]);
+                // Step 5
+                dx = xn.minus(x);
+                // Step 6
+                gxn = new VectorN(NumDerivs.G_x_central(G, xn.getArray(), eps_CD));
+                dgx = gxn.minus(gx); // dgx = gxn - gx
+                // Step 7
+                DFP_update(dx, dgx, H);
 
-		// Conclusion		
-		if (status == 0)
-			System.out.println("Convergence:");
-		if (status == 1)
-			System.out.println("Maximum number of iterations reached");
-		if (status == 2)
-			System.out.println("Goldstein Search failed");
-		for (i = 0; i < x.length; i++)
-			System.out.print("x" + i + "= " + x.x[i] + "  ");
-		System.out.println("");
-		System.out.println("|Gx|= " + norm);
-		dataset.addSeries(series1);
-		series2.add(x.getArray()[0],x.getArray()[1]);
-		dataset.addSeries(series2);
+                krytx = xn.minus(x);
+                normx = norm(krytx.getArray());
+                if (normx<eps_x){
+                    more_iter = false;
+                    if (Double.isNaN(G.evaluate(x.getArray()))) {
+                        return null;
+                    }
+           //         print_line(dataset, area, it, x.getArray(), G.evaluate(x.getArray()), gx.getArray(), norm);
+                    status = 3;
+                }
 
-		return x.getArray();
+                normfx = Math.abs(G.evaluate(xn.getArray())-G.evaluate(x.getArray()));
+                if(normfx<eps_fx){
+                    more_iter = false;
+                    if (Double.isNaN(G.evaluate(x.getArray()))) {
+                        return null;
+                    }
+           //         print_line(dataset, area, it, x.getArray(), G.evaluate(x.getArray()), gx.getArray(), norm);
+                    status = 4;
+                }
 
-	}
+                // Step 8
+                copy(xn, x);
+                copy(gxn, gx);
+                it++;
+                if (it > max_it) {
+                    more_iter = false;
+                    status = 1;
+                }
+                if (GolsteinSearch.status > 0) {
+                    System.out.println("Linesearch failed, status: " + GolsteinSearch.status);
+                    // x might still be minimum, check
+                    more_iter = false;
+                    status = 2;
+                }
+            }
+        }
 
-	private void copy(double[] from, double[] to)
-	{
-		System.arraycopy(from, 0, to, 0, from.length);
-	}
+        // Conclusion
+        if (status == 0) {
+            System.out.println("Convergence:");
+            area.append("Znaleziono minimum lokalne w "+(it)+" iteracji na podstawie kryterium gradientów:\n");
+        }
+        if (status == 1) {
+            System.out.println("Maximum number of iterations reached");
+            area.append("Przekroczono maksymalną liczbę iteracji\n");
+        }
+        if (status == 2)
+            System.out.println("Goldstein Search failed");
+        if (status == 3) {
+            System.out.println("Convergence:");
+            area.append("Znaleziono minimum lokalne w "+it+" iteracji na podstawie kryterium różnicy argumentów:\n");
+        }
+        if (status == 4) {
+            System.out.println("Convergence:");
+            area.append("Znaleziono minimum lokalne w "+ it +" iteracji na podstawie kryterium różnicy wartości:\n");
+        }
+        for (i = 0; i < x.length; i++) {
+            System.out.print("x" + i + "= " + df.format(x.x[i]) + "  ");
+            area.append("x" + i + "= " + df.format(x.x[i]) + "  ");
+        }
+        area.append("\n");
+        area.append("f(X)= "+ df.format(G.evaluate(x.getArray())) + "\n");
+        System.out.println("");
+        System.out.println("|Gx|= " + norm);
+        dataset.addSeries(series1);
+        series2.add(x.getArray()[0], x.getArray()[1]);
+        dataset.addSeries(series2);
 
-	private void copy(VectorN from, VectorN to)
-	{
-		System.arraycopy(from.getArray(), 0, to.getArray(), 0, from.length);
-	}
+        return x.getArray();
+
+    }
+
+    private void copy(double[] from, double[] to) {
+        System.arraycopy(from, 0, to, 0, from.length);
+    }
+
+    private void copy(VectorN from, VectorN to) {
+        System.arraycopy(from.getArray(), 0, to.getArray(), 0, from.length);
+    }
 
 }

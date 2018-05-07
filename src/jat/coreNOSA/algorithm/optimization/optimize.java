@@ -85,7 +85,7 @@ public class optimize {
         df.applyPattern("  ###.########; -###.#######");
         //df.applyPattern("####0.000000; -###0.000000");
         df.setMinimumFractionDigits(8);
-        df.setMinimumIntegerDigits(4);
+        df.setMinimumIntegerDigits(2);
         itf = NumberFormat.getInstance();
         itf.setMinimumIntegerDigits(4);
     }
