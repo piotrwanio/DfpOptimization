@@ -23,14 +23,18 @@ package jat.coreNOSA.algorithm.optimization;
 import jat.coreNOSA.algorithm.ScalarfromArrayFunction;
 import jat.coreNOSA.math.MatrixVector.data.Matrix;
 import jat.coreNOSA.math.MatrixVector.data.VectorN;
+import jat.application.InputWindow;
 import jat.tests.core.algorithm.optimization.functions.MyFunction;
 import org.jfree.data.general.Dataset;
+import org.jfree.data.xy.AbstractXYDataset;
 import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.mariuszgromada.math.mxparser.Function;
 
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Davidon-Fletcher-Powell variable metric method
@@ -46,8 +50,7 @@ public class DFP extends optimize {
     public int max_it = 50; // maximum iterations
     public double beta;
     public MyFunction G;
-    XYSeries series1 = new XYSeries("kolejne_minima");
-    XYSeries series2 = new XYSeries("minimum_lokalne_funkcji");
+    XYSeries series1 = new XYSeries("kolejne_minima",false);
 
     public DFP(Function function, double[] x_init) {
         super(function, x_init);
@@ -73,7 +76,7 @@ public class DFP extends optimize {
         return;
     }
 
-    public double[] find_min_DFP(XYSeriesCollection dataset, JTextArea area) {
+    public double[] find_min_DFP(XYSeriesCollection dataset,XYSeriesCollection dataset2, JTextArea area) {
         Matrix H = new Matrix(n); // Set H to identity matrix
         VectorN x, xn, dx, gx, gxn, dgx, krytx;
         double[] dummy;
@@ -183,9 +186,13 @@ public class DFP extends optimize {
         area.append("f(X)= "+ df.format(G.evaluate(x.getArray())) + "\n");
         System.out.println("");
         System.out.println("|Gx|= " + norm);
-        dataset.addSeries(series1);
+        String result = "("+x.getArray()[0]+","+x.getArray()[1]+")";
+        dataset2 = new XYSeriesCollection();
+        XYSeries series2= new XYSeries("min ");
         series2.add(x.getArray()[0], x.getArray()[1]);
+  //      series2.setNotify(true);
         dataset.addSeries(series2);
+        dataset.addSeries(series1);
 
         return x.getArray();
 
@@ -198,5 +205,7 @@ public class DFP extends optimize {
     private void copy(VectorN from, VectorN to) {
         System.arraycopy(from.getArray(), 0, to.getArray(), 0, from.length);
     }
+
+
 
 }

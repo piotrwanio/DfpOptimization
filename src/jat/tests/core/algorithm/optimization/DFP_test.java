@@ -21,6 +21,7 @@
 package jat.tests.core.algorithm.optimization;
 
 import jat.coreNOSA.algorithm.optimization.DFP;
+import jat.coreNOSA.algorithm.optimization.LabeledXYDataset;
 import jat.tests.core.algorithm.optimization.functions.MyFunction;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.mariuszgromada.math.mxparser.Function;
@@ -43,6 +44,7 @@ public class DFP_test
 		Function function = new Function(f);
 		JTextArea area = new JTextArea();
 		XYSeriesCollection ds = new XYSeriesCollection();
+		XYSeriesCollection ds2 = new XYSeriesCollection();
 
 		System.out.println("MyFunction function, Numerical derivs, DFP");
 
@@ -55,7 +57,7 @@ public class DFP_test
 		dfp.err_dfp=1.e-6;
 		dfp.eps_CD=1.e-5;
 		dfp.max_it=50;
-		double[] x=dfp.find_min_DFP(ds, area);
+		double[] x=dfp.find_min_DFP(ds, ds2, area);
 		
 	}
 }

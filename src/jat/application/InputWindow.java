@@ -5,6 +5,7 @@ import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.AxisLocation;
 import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.labels.*;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.PaintScale;
 import org.jfree.chart.renderer.xy.XYBlockRenderer;
@@ -15,6 +16,7 @@ import org.jfree.data.general.Dataset;
 import org.jfree.data.xy.*;
 import org.jfree.ui.RectangleEdge;
 import org.jfree.ui.RectangleInsets;
+import org.jfree.ui.TextAnchor;
 import org.mariuszgromada.math.mxparser.Expression;
 import org.mariuszgromada.math.mxparser.Function;
 import org.mariuszgromada.math.mxparser.mXparser;
@@ -25,7 +27,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.reflect.Array;
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 public class InputWindow implements ActionListener {
 
@@ -43,6 +47,7 @@ public class InputWindow implements ActionListener {
     ChartPanel chartPanel;
     static Function f;
     XYZDataset dataset;
+    XYSeriesCollection markPoint;
     XYSeriesCollection pointsDataset;
     JFreeChart chart;
     private String sampleFunction;
@@ -183,7 +188,7 @@ public class InputWindow implements ActionListener {
                 }
                 dfp.eps_CD = 1.e-5;
                 dfp.max_it = max_iter;
-                double[] x = dfp.find_min_DFP(pointsDataset, resultsArea);
+                double[] x = dfp.find_min_DFP(pointsDataset, markPoint, resultsArea);
                 if (x == null) {
                     wasPainted = true;
                     resultsArea.append("BŁĄD! Wprowadzona funkcja ma nieprawidłowy format! Domyślny format funkcji to f(x1,x2,...,xn) = a*x1+b*x2+...+z*xn\n");
@@ -692,12 +697,27 @@ public class InputWindow implements ActionListener {
         }
         ((XYPlot) chart.getPlot()).setDataset(1, dataset);
         ((XYPlot) chart.getPlot()).setDataset(0, pointsDataset);
+        ((XYPlot) chart.getPlot()).setDataset(2, markPoint);
 
         /// creating renderer for line and shape chart
         XYLineAndShapeRenderer renderer2 = new XYLineAndShapeRenderer();
-        renderer2.setSeriesPaint(0, Color.black);
-        renderer2.setSeriesLinesVisible(0,false);
-        renderer2.setSeriesPaint(1, Color.white);
+        renderer2.setSeriesPaint(1, Color.black);
+   //     renderer2.setSeriesLinesVisible(0,false);
+        renderer2.setSeriesPaint(0, Color.white);
+
+        XYLineAndShapeRenderer renderer3 = new XYLineAndShapeRenderer(true,true);
+        NumberFormat format = NumberFormat.getNumberInstance();
+        format.setMaximumFractionDigits(3); // etc.
+        XYItemLabelGenerator generator =
+                new StandardXYItemLabelGenerator("{0} [{1};{2}]", format, format);
+        renderer3.setBaseItemLabelGenerator(generator);
+        renderer3.setBaseItemLabelsVisible(true);
+        renderer3.setBaseItemLabelFont(new Font("TimesRoman", Font.BOLD, 12));
+        renderer3.setBaseItemLabelPaint(Color.white);
+        renderer3.setSeriesItemLabelsVisible(1,false);
+        renderer3.setSeriesItemLabelsVisible(0,true);
+        renderer3.setSeriesPaint(1,Color.black);
+        renderer3.setSeriesPaint(0,Color.white);
 
         /// setting lines non-visible
         //    renderer2.setSeriesLinesVisible(1, false);
@@ -710,7 +730,8 @@ public class InputWindow implements ActionListener {
         r.setBlockWidth(2.0 * rangeX / (double) N);
         r.setSeriesVisible(0, true);
         ((XYPlot) chart.getPlot()).setRenderer(1, r);
-        ((XYPlot) chart.getPlot()).setRenderer(0, renderer2);
+      //  ((XYPlot) chart.getPlot()).setRenderer(0, renderer2);
+        ((XYPlot) chart.getPlot()).setRenderer(0, renderer3);
 
         // setting chart's color legend
         NumberAxis scaleAxis = new NumberAxis("Skala");
@@ -743,6 +764,7 @@ public class InputWindow implements ActionListener {
         wasPainted = true;
 
     }
+
 
 
     public static void main(String[] args) {
