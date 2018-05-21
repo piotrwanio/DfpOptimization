@@ -7,9 +7,206 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88356dc0-4d7c-4b44-a7f3-8397bb78e542" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DFP_all.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DFP_all.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/DFP_all_jar/DFP_all.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/DFP_all_jar/DFP_all.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DFP_all/jat/application/InputWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DFP_all/jat/application/InputWindow$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DFP_all/jat/application/InputWindow$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DFP_all/jat/application/InputWindow$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DFP_all/jat/application/InputWindow$SpectrumPaintScale.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DFP_all/jat/application/InputWindow$SpectrumPaintScale.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DFP_all/jat/application/InputWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DFP_all/jat/application/InputWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/algorithm/optimization/DFP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DFP_all/jat/coreNOSA/algorithm/optimization/DFP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DFP_all/jat/tests/core/algorithm/optimization/DFP_test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DFP_all/jat/tests/core/algorithm/optimization/DFP_test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DFP_all/jat/tests/core/algorithm/optimization/functions/MyFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DFP_all/jat/tests/core/algorithm/optimization/functions/MyFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/core/algorithm/optimization/DataArraySearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/core/math/MatrixVector/util/LabeledMatrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/core/math/MatrixVector/util/Maths.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/algorithm/ScalarfromArrayFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/algorithm/optimization/DFP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/algorithm/optimization/GolsteinSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/algorithm/optimization/NumDerivs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/algorithm/optimization/optimize.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/algorithm/optimization/package.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/CoordTransform.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/Interpolator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MathUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/GaussianVector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/Matrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/Quaternion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/RandomMatrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/RandomNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/RandomVariable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/RotationMatrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/Text.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/UniformVector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/VectorList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/VectorN.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/arrayTools/Find.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/arrayTools/Shuffle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/arrayTools/Sort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/function/DoubleFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/function/DoubleFunctionExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/function/DoubleFunctionInterpolation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/function/InvokeDoubleFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/function/InvokeMatrixFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/function/MatrixFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/function/MatrixFunctionExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/function/TestDoubleFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/function/TestDoubleFunctionExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/function/expressionParser/Evaluator$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/function/expressionParser/Evaluator$Operator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/function/expressionParser/Evaluator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/data/MatrixFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/data/TextFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/data/fileTools/CharFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/data/fileTools/MatrixString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/data/fileTools/TextString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/FrameView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/FunctionPlot2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/FunctionPlot3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/MatrixHist2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/MatrixHist3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/MatrixPlot2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/MatrixPlot3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/MatrixTable$DoubleModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/MatrixTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/PanelParameters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/Plot2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/Plot3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/Progress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/TextWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/Axe2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/Axe3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/Coordinates2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/Coordinates3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/DataPlot2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/DataPlot3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/Eye3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/Grid2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/Grid3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/NotedPoint2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/NotedPoint3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/PlotAttributes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/matrixDecompositions/CholeskyDecomposition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/matrixDecompositions/EigenvalueDecomposition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/matrixDecompositions/Householder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/matrixDecompositions/LUDecomposition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/matrixDecompositions/Mathfun.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/matrixDecompositions/QRDecomposition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/matrixDecompositions/SingularValueDecomposition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/package.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/MatrixVector/data/test/Testjmat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/coreNOSA/math/package.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/tests/core/algorithm/optimization/DFP_test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/tests/core/algorithm/optimization/DataArraySearchTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/tests/core/algorithm/optimization/TestSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/tests/core/algorithm/optimization/functions/Function1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/tests/core/algorithm/optimization/functions/Function2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/tests/core/algorithm/optimization/functions/Function3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/tests/core/algorithm/optimization/functions/Function4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/tests/core/algorithm/optimization/functions/Function5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/tests/core/algorithm/optimization/functions/QuadraticFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/tests/core/algorithm/optimization/functions/Rosenbrock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/tests/core/algorithm/optimization/output_DFP.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/tests/core/algorithm/optimization/output_gradient.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/tests/core/algorithm/optimization/output_linesearch.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-alg/jat/tests/core/algorithm/optimization/package.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/core/algorithm/optimization/DataArraySearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/core/math/MatrixVector/util/LabeledMatrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/core/math/MatrixVector/util/Maths.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/algorithm/ScalarfromArrayFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/algorithm/optimization/DFP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/algorithm/optimization/GolsteinSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/algorithm/optimization/NumDerivs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/algorithm/optimization/optimize.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/algorithm/optimization/package.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/CoordTransform.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/Interpolator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MathUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/GaussianVector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/Matrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/Quaternion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/RandomMatrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/RandomNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/RandomVariable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/RotationMatrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/Text.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/UniformVector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/VectorList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/VectorN.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/arrayTools/Find.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/arrayTools/Shuffle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/arrayTools/Sort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/function/DoubleFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/function/DoubleFunctionExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/function/DoubleFunctionInterpolation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/function/InvokeDoubleFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/function/InvokeMatrixFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/function/MatrixFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/function/MatrixFunctionExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/function/TestDoubleFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/function/TestDoubleFunctionExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/function/expressionParser/Evaluator$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/function/expressionParser/Evaluator$Operator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/function/expressionParser/Evaluator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/data/MatrixFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/data/TextFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/data/fileTools/CharFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/data/fileTools/MatrixString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/data/fileTools/TextString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/FrameView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/FunctionPlot2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/FunctionPlot3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/MatrixHist2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/MatrixHist3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/MatrixPlot2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/MatrixPlot3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/MatrixTable$DoubleModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/MatrixTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/PanelParameters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/Plot2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/Plot3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/Progress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/TextWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/Axe2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/Axe3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/Coordinates2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/Coordinates3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/DataPlot2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/DataPlot3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/Eye3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/Grid2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/Grid3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/NotedPoint2D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/NotedPoint3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/io/gui/plotTools/PlotAttributes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/matrixDecompositions/CholeskyDecomposition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/matrixDecompositions/EigenvalueDecomposition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/matrixDecompositions/Householder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/matrixDecompositions/LUDecomposition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/matrixDecompositions/Mathfun.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/matrixDecompositions/QRDecomposition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/matrixDecompositions/SingularValueDecomposition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/package.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/MatrixVector/data/test/Testjmat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/coreNOSA/math/package.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/tests/core/algorithm/optimization/DFP_test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/tests/core/algorithm/optimization/DataArraySearchTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/tests/core/algorithm/optimization/TestSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/tests/core/algorithm/optimization/functions/Function1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/tests/core/algorithm/optimization/functions/Function2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/tests/core/algorithm/optimization/functions/Function3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/tests/core/algorithm/optimization/functions/Function4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/tests/core/algorithm/optimization/functions/Function5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/tests/core/algorithm/optimization/functions/MyFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/tests/core/algorithm/optimization/functions/QuadraticFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/tests/core/algorithm/optimization/output_DFP.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/tests/core/algorithm/optimization/output_gradient.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/tests/core/algorithm/optimization/output_linesearch.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dfp-algor-mxparser/jat/tests/core/algorithm/optimization/package.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jat/application/InputWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jat/application/InputWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/DFP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/DFP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/DFP_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/DFP_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/functions/MyFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/functions/MyFunction.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +221,8 @@
       <file leaf-file-name="InputWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jat/application/InputWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="200" column="11" lean-forward="true" selection-start-line="200" selection-start-column="11" selection-end-line="200" selection-end-column="11" />
+            <state relative-caret-position="40">
+              <caret line="180" column="73" lean-forward="true" selection-start-line="180" selection-start-column="73" selection-end-line="180" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -33,27 +230,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LabelGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jat/application/LabelGenerator.java">
+      <file leaf-file-name="TestAPI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/TestAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XYSeries.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/jfreechart-1.0.13.jar!/org/jfree/data/xy/XYSeries.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
-              <folding>
-                <element signature="e#3389#3390#0" expanded="true" />
-                <element signature="e#3425#3426#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -61,17 +242,12 @@
       <file leaf-file-name="MyFunction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/functions/MyFunction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="34" column="40" lean-forward="true" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DFP_test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/DFP_test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+            <state relative-caret-position="153">
+              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1084#1085#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,8 +255,24 @@
       <file leaf-file-name="DFP.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/DFP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="194" column="35" selection-start-line="194" selection-start-column="35" selection-end-line="194" selection-end-column="35" />
+            <state relative-caret-position="85">
+              <caret line="47" column="45" lean-forward="true" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#7959#7960#0" expanded="true" />
+                <element signature="e#8020#8021#0" expanded="true" />
+                <element signature="e#8071#8072#0" expanded="true" />
+                <element signature="e#8154#8155#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParserTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/ParserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,51 +280,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LabeledXYDataset.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/LabeledXYDataset.java">
+      <file leaf-file-name="Hessian.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/Hessian.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="1530">
+              <caret line="93" column="59" selection-start-line="93" selection-start-column="59" selection-end-line="93" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#704#705#0" expanded="true" />
-                <element signature="e#728#729#0" expanded="true" />
-                <element signature="e#792#793#0" expanded="true" />
-                <element signature="e#821#822#0" expanded="true" />
-                <element signature="e#878#879#0" expanded="true" />
-                <element signature="e#913#914#0" expanded="true" />
-                <element signature="e#975#976#0" expanded="true" />
-                <element signature="e#1009#1010#0" expanded="true" />
-                <element signature="e#1071#1072#0" expanded="true" />
-                <element signature="e#1105#1106#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="optimize.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/optimize.java">
+      <file leaf-file-name="HessianTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/test/HessianTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="109" column="46" lean-forward="true" selection-start-line="109" selection-start-column="46" selection-end-line="109" selection-end-column="46" />
+            <state relative-caret-position="153">
+              <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GolsteinSearch.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/GolsteinSearch.java">
+      <file leaf-file-name="NumDerivs.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/NumDerivs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+            <state relative-caret-position="1207">
+              <caret line="90" column="25" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LineSearch.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../LineSearch.java">
+      <file leaf-file-name="DFP_test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/DFP_test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="140" column="42" selection-start-line="140" selection-start-column="42" selection-end-line="140" selection-end-column="42" />
+            <state relative-caret-position="213">
+              <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -142,6 +327,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Arquillian JUnit Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -156,6 +342,9 @@
       <find>autoso</find>
       <find>xys</find>
       <find>range</find>
+      <find>num</find>
+      <find>DFP</find>
+      <find>function</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -165,13 +354,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-        <option value="$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/functions/MyFunction.java" />
         <option value="$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/GolsteinSearch.java" />
         <option value="$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/optimize.java" />
         <option value="$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/LabeledXYDataset.java" />
         <option value="$PROJECT_DIR$/src/jat/application/LabelGenerator.java" />
-        <option value="$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/DFP_test.java" />
+        <option value="$PROJECT_DIR$/src/test/ParserTest.java" />
+        <option value="$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/functions/MyFunction.java" />
+        <option value="$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/Hessian.java" />
+        <option value="$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/test/HessianTest.java" />
         <option value="$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/DFP.java" />
+        <option value="$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/DFP_test.java" />
         <option value="$PROJECT_DIR$/src/jat/application/InputWindow.java" />
       </list>
     </option>
@@ -196,6 +388,7 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -207,7 +400,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -257,6 +449,30 @@
               <item name="algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="optimization" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="dfp-optimization" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dfp-optimization" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jat" type="462c0819:PsiDirectoryNode" />
+              <item name="coreNOSA" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="optimization" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dfp-optimization" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dfp-optimization" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jat" type="462c0819:PsiDirectoryNode" />
+              <item name="coreNOSA" type="462c0819:PsiDirectoryNode" />
+              <item name="math" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dfp-optimization" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dfp-optimization" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -266,6 +482,9 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -273,8 +492,15 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="jat.coreNOSA.algorithm.optimization.test" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="jat.coreNOSA.algorithm.optimization" />
     </key>
@@ -292,13 +518,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.InputWindow">
-    <configuration name="DFP_test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jat.tests.core.algorithm.optimization.DFP_test" />
+    <configuration name="HessianTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jat.coreNOSA.algorithm.optimization.test.HessianTest" />
       <module name="DFP_all" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jat.tests.core.algorithm.optimization.*" />
+          <option name="PATTERN" value="jat.coreNOSA.algorithm.optimization.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -310,6 +536,28 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="jat.application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="ParserTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.ParserTest" />
+      <module name="DFP_all" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="TestAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.TestAPI" />
+      <module name="DFP_all" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -360,14 +608,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.InputWindow" />
-      <item itemvalue="Application.DFP_test" />
       <item itemvalue="JAR Application.DFP_all.jar" />
+      <item itemvalue="Application.TestAPI" />
+      <item itemvalue="Application.ParserTest" />
+      <item itemvalue="Application.HessianTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.InputWindow" />
+        <item itemvalue="Application.HessianTest" />
+        <item itemvalue="Application.ParserTest" />
+        <item itemvalue="Application.TestAPI" />
         <item itemvalue="JAR Application.DFP_all.jar" />
-        <item itemvalue="Application.DFP_test" />
       </list>
     </recent_temporary>
   </component>
@@ -385,26 +637,30 @@
       <workItem from="1524926583294" duration="16946000" />
       <workItem from="1525096384962" duration="12209000" />
       <workItem from="1525684935296" duration="25030000" />
+      <workItem from="1525792833172" duration="252000" />
+      <workItem from="1526852140633" duration="7067000" />
+      <workItem from="1526901353325" duration="6782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79312000" />
+    <option name="totallyTimeSpent" value="93413000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.3290938" />
+      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.49853587" weight="0.32755905" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50292826" side_tool="true" visible="true" weight="0.32755905" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.3290938" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.49707174" visible="true" weight="0.32755905" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
@@ -415,7 +671,7 @@
       <window_info id="UI Designer" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.3990461" />
+      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.49853587" weight="0.3984252" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
@@ -432,10 +688,101 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url />
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="x1" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/GolsteinSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LineSearch.java" />
+    <entry file="file://$PROJECT_DIR$/src/jat/application/InputWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3400">
+          <caret line="200" column="11" lean-forward="true" selection-start-line="200" selection-start-column="11" selection-end-line="200" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jat/application/LabelGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jfreechart-1.0.13.jar!/org/jfree/data/xy/XYSeries.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/functions/MyFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="34" column="40" lean-forward="true" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/DFP_test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/DFP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2754">
+          <caret line="194" column="35" selection-start-line="194" selection-start-column="35" selection-end-line="194" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/LabeledXYDataset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/optimize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="109" column="46" lean-forward="true" selection-start-line="109" selection-start-column="46" selection-end-line="109" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/GolsteinSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LineSearch.java" />
     <entry file="file://$PROJECT_DIR$/src/jat/application/InputWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10506">
@@ -471,9 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2856">
           <caret line="168" selection-start-line="168" selection-end-line="168" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -526,9 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1785">
           <caret line="105" column="25" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -612,69 +953,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../LineSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="140" column="42" selection-start-line="140" selection-start-column="42" selection-end-line="140" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../LineSearch.java" />
     <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/optimize.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="109" column="46" lean-forward="true" selection-start-line="109" selection-start-column="46" selection-end-line="109" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/functions/MyFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="34" column="40" lean-forward="true" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        <state relative-caret-position="1428">
+          <caret line="109" column="46" selection-start-line="109" selection-start-column="46" selection-end-line="109" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/GolsteinSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+        <state relative-caret-position="629">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/jfreechart-1.0.13.jar!/org/jfree/data/xy/XYSeries.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
-          <folding>
-            <element signature="e#3389#3390#0" expanded="true" />
-            <element signature="e#3425#3426#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1598">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/LabeledXYDataset.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
+        <state relative-caret-position="442">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#728#729#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
-            <element signature="e#878#879#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jat/application/LabelGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="136">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/TestAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="33" column="49" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/NumDerivs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="90" column="25" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/functions/MyFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1084#1085#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/MathParser.org-mXparser-4.1.1.jar!/org/mariuszgromada/math/mxparser/Function.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="151" column="30" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
+          <folding>
+            <element signature="e#6789#6790#0" expanded="true" />
+            <element signature="e#6857#6858#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/test/HessianTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/Hessian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="93" column="59" selection-start-line="93" selection-start-column="59" selection-end-line="93" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -683,25 +1060,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jat/tests/core/algorithm/optimization/DFP_test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+        <state relative-caret-position="213">
+          <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jat/coreNOSA/algorithm/optimization/DFP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="194" column="35" selection-start-line="194" selection-start-column="35" selection-end-line="194" selection-end-column="35" />
+        <state relative-caret-position="85">
+          <caret line="47" column="45" lean-forward="true" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#7959#7960#0" expanded="true" />
+            <element signature="e#8020#8021#0" expanded="true" />
+            <element signature="e#8071#8072#0" expanded="true" />
+            <element signature="e#8154#8155#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jat/application/InputWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="200" column="11" lean-forward="true" selection-start-line="200" selection-start-column="11" selection-end-line="200" selection-end-column="11" />
+        <state relative-caret-position="40">
+          <caret line="180" column="73" lean-forward="true" selection-start-line="180" selection-start-column="73" selection-end-line="180" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

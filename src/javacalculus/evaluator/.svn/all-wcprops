@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/80/trunk/src/javacalculus/evaluator
+END
+CalcDET.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/68/trunk/src/javacalculus/evaluator/CalcDET.java
+END
+CalcPLOT.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/49/trunk/src/javacalculus/evaluator/CalcPLOT.java
+END
+CalcMULTIPLY.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/69/trunk/src/javacalculus/evaluator/CalcMULTIPLY.java
+END
+CalcGAMMA.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/52/trunk/src/javacalculus/evaluator/CalcGAMMA.java
+END
+CalcTAN.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/80/trunk/src/javacalculus/evaluator/CalcTAN.java
+END
+CalcCOS.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/47/trunk/src/javacalculus/evaluator/CalcCOS.java
+END
+CalcADD.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/66/trunk/src/javacalculus/evaluator/CalcADD.java
+END
+CalcSUB.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/56/trunk/src/javacalculus/evaluator/CalcSUB.java
+END
+CalcSIN.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/47/trunk/src/javacalculus/evaluator/CalcSIN.java
+END
+CalcINT.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/56/trunk/src/javacalculus/evaluator/CalcINT.java
+END
+CalcDEFINE.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/47/trunk/src/javacalculus/evaluator/CalcDEFINE.java
+END
+CalcPOWER.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/48/trunk/src/javacalculus/evaluator/CalcPOWER.java
+END
+CalcFACTORIAL.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/50/trunk/src/javacalculus/evaluator/CalcFACTORIAL.java
+END
+CalcABS.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/54/trunk/src/javacalculus/evaluator/CalcABS.java
+END
+CalcPLOT3D.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/62/trunk/src/javacalculus/evaluator/CalcPLOT3D.java
+END
+CalcDIFF.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/56/trunk/src/javacalculus/evaluator/CalcDIFF.java
+END
+CalcLN.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/47/trunk/src/javacalculus/evaluator/CalcLN.java
+END
+CalcTAYLOR.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/47/trunk/src/javacalculus/evaluator/CalcTAYLOR.java
+END

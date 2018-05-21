@@ -50,11 +50,13 @@ public class DFP extends optimize {
     public int max_it = 50; // maximum iterations
     public double beta;
     public MyFunction G;
+    public Hessian Hessian;
     XYSeries series1 = new XYSeries("kolejne_minima",false);
 
-    public DFP(Function function, double[] x_init) {
+    public DFP(Function function, double[] x_init) throws Exception{
         super(function, x_init);
         G = new MyFunction(function);
+        Hessian = new Hessian(G);
     }
 
     void DFP_update(VectorN dx, VectorN dg, Matrix H) {
@@ -157,6 +159,14 @@ public class DFP extends optimize {
                     status = 2;
                 }
             }
+        }
+
+        // Hessian check
+        double det = Hessian.detHessian(x.getArray());
+        if(det<0 && status != 1){
+            System.out.println("Hesjan jest mniejszy od 0 dla znalezionego punktu.");
+            area.append("Hesjan jest mniejszy od 0 dla znalezionego punktu.\n");
+            status = 5;
         }
 
         // Conclusion

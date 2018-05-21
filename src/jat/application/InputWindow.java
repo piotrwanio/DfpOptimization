@@ -155,21 +155,27 @@ public class InputWindow implements ActionListener {
                 }
 
                 // create instance of the class DFP
-                DFP dfp = new DFP(function, x0);
+                DFP dfp = null;
+                try {
+                    dfp = new DFP(function, x0);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
                 if(eps1Field.getText().isEmpty()){
-                    dfp.err_dfp = 1.e-5;
+                    dfp.err_dfp = 1.e-6;
                 }
                 else{
                     dfp.err_dfp = Double.parseDouble(eps1Field.getText());
                 }
                 if(eps2Field.getText().isEmpty()){
-                    dfp.eps_x = 1.e-5;
+                    dfp.eps_x = 1.e-6;
                 }
                 else{
                     dfp.eps_x = Double.parseDouble(eps2Field.getText());
                 }
                 if(eps3Field.getText().isEmpty()){
-                    dfp.eps_fx = 1.e-5;
+                    dfp.eps_fx = 1.e-6;
                 }
                 else{
                     dfp.eps_fx = Double.parseDouble(eps3Field.getText());
@@ -181,7 +187,7 @@ public class InputWindow implements ActionListener {
                     dfp.beta = Double.parseDouble(betaField.getText());
                 }
                 if(eps4Field.getText().isEmpty()){
-                    dfp.err_ods = 1.e-5;
+                    dfp.err_ods = 1.e-6;
                 }
                 else{
                     dfp.err_ods = Double.parseDouble(eps4Field.getText());

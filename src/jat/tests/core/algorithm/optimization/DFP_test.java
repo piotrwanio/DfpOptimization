@@ -52,7 +52,14 @@ public class DFP_test
 		DFP_test dt = new DFP_test();
 		x_init[0] = 0;
 		x_init[1] = 0;
-		DFP dfp = new DFP(function, x_init);
+		DFP dfp = null;
+		try {
+			dfp = new DFP(function, x_init);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+
 		dfp.err_ods=1.e-6;
 		dfp.err_dfp=1.e-6;
 		dfp.eps_CD=1.e-5;

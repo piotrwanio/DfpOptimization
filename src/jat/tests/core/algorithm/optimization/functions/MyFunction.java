@@ -28,6 +28,10 @@ import static java.lang.Double.NaN;
 public class MyFunction implements ScalarfromArrayFunction {
     private Function f;
 
+    public Function getF() {
+        return f;
+    }
+
     public MyFunction(Function f) {
         this.f = f;
     }

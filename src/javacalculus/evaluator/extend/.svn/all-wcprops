@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/69/trunk/src/javacalculus/evaluator/extend
+END
+CalcConstantEvaluator.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/44/trunk/src/javacalculus/evaluator/extend/CalcConstantEvaluator.java
+END
+CalcNullEvaluator.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/44/trunk/src/javacalculus/evaluator/extend/CalcNullEvaluator.java
+END
+CalcOperatorEvaluator.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/44/trunk/src/javacalculus/evaluator/extend/CalcOperatorEvaluator.java
+END
+CalcNParamFunctionEvaluator.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/50/trunk/src/javacalculus/evaluator/extend/CalcNParamFunctionEvaluator.java
+END
+CalcFunctionEvaluator.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/44/trunk/src/javacalculus/evaluator/extend/CalcFunctionEvaluator.java
+END
+Calc1ParamFunctionEvaluator.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/54/trunk/src/javacalculus/evaluator/extend/Calc1ParamFunctionEvaluator.java
+END
+Calc2ParamFunctionEvaluator.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/69/trunk/src/javacalculus/evaluator/extend/Calc2ParamFunctionEvaluator.java
+END

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/80/trunk/src/javacalculus/struct
+END
+CalcInteger.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/70/trunk/src/javacalculus/struct/CalcInteger.java
+END
+CalcVector.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/80/trunk/src/javacalculus/struct/CalcVector.java
+END
+CalcMatrix.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/80/trunk/src/javacalculus/struct/CalcMatrix.java
+END
+CalcFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/72/trunk/src/javacalculus/struct/CalcFunction.java
+END
+CalcFraction.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/70/trunk/src/javacalculus/struct/CalcFraction.java
+END
+CalcSymbol.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/80/trunk/src/javacalculus/struct/CalcSymbol.java
+END
+CalcObject.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/70/trunk/src/javacalculus/struct/CalcObject.java
+END
+CalcDouble.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/70/trunk/src/javacalculus/struct/CalcDouble.java
+END
