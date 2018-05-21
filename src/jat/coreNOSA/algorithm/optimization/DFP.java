@@ -51,12 +51,14 @@ public class DFP extends optimize {
     public double beta;
     public MyFunction G;
     public Hessian Hessian;
-    XYSeries series1 = new XYSeries("kolejne_minima",false);
+    XYSeries series1 = new XYSeries("kolejne_minima", false);
 
-    public DFP(Function function, double[] x_init) throws Exception{
+    public DFP(Function function, double[] x_init) throws Exception {
         super(function, x_init);
         G = new MyFunction(function);
-        Hessian = new Hessian(G);
+        if(!(function.getFunctionExpressionString().contains("exp"))) {
+            Hessian = new Hessian(G);
+        }
     }
 
     void DFP_update(VectorN dx, VectorN dg, Matrix H) {
@@ -78,7 +80,7 @@ public class DFP extends optimize {
         return;
     }
 
-    public double[] find_min_DFP(XYSeriesCollection dataset,XYSeriesCollection dataset2, JTextArea area) {
+    public double[] find_min_DFP(XYSeriesCollection dataset, XYSeriesCollection dataset2, JTextArea area) {
         Matrix H = new Matrix(n); // Set H to identity matrix
         VectorN x, xn, dx, gx, gxn, dgx, krytx;
         double[] dummy;
@@ -125,22 +127,22 @@ public class DFP extends optimize {
 
                 krytx = xn.minus(x);
                 normx = norm(krytx.getArray());
-                if (normx<eps_x){
+                if (normx < eps_x) {
                     more_iter = false;
                     if (Double.isNaN(G.evaluate(x.getArray()))) {
                         return null;
                     }
-           //         print_line(dataset, area, it, x.getArray(), G.evaluate(x.getArray()), gx.getArray(), norm);
+                    //         print_line(dataset, area, it, x.getArray(), G.evaluate(x.getArray()), gx.getArray(), norm);
                     status = 3;
                 }
 
-                normfx = Math.abs(G.evaluate(xn.getArray())-G.evaluate(x.getArray()));
-                if(normfx<eps_fx){
+                normfx = Math.abs(G.evaluate(xn.getArray()) - G.evaluate(x.getArray()));
+                if (normfx < eps_fx) {
                     more_iter = false;
                     if (Double.isNaN(G.evaluate(x.getArray()))) {
                         return null;
                     }
-           //         print_line(dataset, area, it, x.getArray(), G.evaluate(x.getArray()), gx.getArray(), norm);
+                    //         print_line(dataset, area, it, x.getArray(), G.evaluate(x.getArray()), gx.getArray(), norm);
                     status = 4;
                 }
 
@@ -162,17 +164,21 @@ public class DFP extends optimize {
         }
 
         // Hessian check
-        double det = Hessian.detHessian(x.getArray());
-        if(det<0 && status != 1){
-            System.out.println("Hesjan jest mniejszy od 0 dla znalezionego punktu.");
-            area.append("Hesjan jest mniejszy od 0 dla znalezionego punktu.\n");
-            status = 5;
+
+        if (x.length == 2 && !(function.getFunctionExpressionString().contains("exp"))) {
+            double det = Hessian.detHessian(x.getArray());
+            if (det < 0 && status != 1) {
+                System.out.println("Hesjan jest mniejszy od 0 dla znalezionego punktu.");
+                area.append("Hesjan jest mniejszy od 0 dla znalezionego punktu.\n");
+                status = 5;
+            }
         }
+
 
         // Conclusion
         if (status == 0) {
             System.out.println("Convergence:");
-            area.append("Znaleziono minimum lokalne w "+(it)+" iteracji na podstawie kryterium gradientów:\n");
+            area.append("Znaleziono minimum lokalne w " + (it) + " iteracji na podstawie kryterium gradientów:\n");
         }
         if (status == 1) {
             System.out.println("Maximum number of iterations reached");
@@ -182,25 +188,25 @@ public class DFP extends optimize {
             System.out.println("Goldstein Search failed");
         if (status == 3) {
             System.out.println("Convergence:");
-            area.append("Znaleziono minimum lokalne w "+it+" iteracji na podstawie kryterium różnicy argumentów:\n");
+            area.append("Znaleziono minimum lokalne w " + it + " iteracji na podstawie kryterium różnicy argumentów:\n");
         }
         if (status == 4) {
             System.out.println("Convergence:");
-            area.append("Znaleziono minimum lokalne w "+ it +" iteracji na podstawie kryterium różnicy wartości:\n");
+            area.append("Znaleziono minimum lokalne w " + it + " iteracji na podstawie kryterium różnicy wartości:\n");
         }
         for (i = 0; i < x.length; i++) {
             System.out.print("x" + i + "= " + df.format(x.x[i]) + "  ");
             area.append("x" + i + "= " + df.format(x.x[i]) + "  ");
         }
         area.append("\n");
-        area.append("f(X)= "+ df.format(G.evaluate(x.getArray())) + "\n");
+        area.append("f(X)= " + df.format(G.evaluate(x.getArray())) + "\n");
         System.out.println("");
         System.out.println("|Gx|= " + norm);
-        String result = "("+x.getArray()[0]+","+x.getArray()[1]+")";
+        String result = "(" + x.getArray()[0] + "," + x.getArray()[1] + ")";
         dataset2 = new XYSeriesCollection();
-        XYSeries series2= new XYSeries("min ");
+        XYSeries series2 = new XYSeries("min ");
         series2.add(x.getArray()[0], x.getArray()[1]);
-  //      series2.setNotify(true);
+        //      series2.setNotify(true);
         dataset.addSeries(series2);
         dataset.addSeries(series1);
 
@@ -215,7 +221,6 @@ public class DFP extends optimize {
     private void copy(VectorN from, VectorN to) {
         System.arraycopy(from.getArray(), 0, to.getArray(), 0, from.length);
     }
-
 
 
 }

@@ -22,6 +22,11 @@ public class Hessian {
     public Hessian(MyFunction function) throws Exception {
         functionMxparser = function.getF();
         functionString = functionMxparser.getFunctionExpressionString();
+        functionString = functionString.replace("sin", "SIN");
+        functionString = functionString.replace("cos", "COS");
+        functionString = functionString.replace("ln", "LN");
+        functionString = functionString.replace("exp", "1*");
+
         x1 = functionMxparser.getArgument(0).getArgumentName();
         x2 = functionMxparser.getArgument(1).getArgumentName();
 
@@ -82,17 +87,17 @@ public class Hessian {
 
         resultDF_DX1_DX2 = subst(resultDF_DX1_DX2, x1, x[0]);
         resultDF_DX1_DX2 = subst(resultDF_DX1_DX2, x2 , x[1]);
-        resultDF_DX1_DX2 = CALC.SYM_EVAL(resultDF_DX1_DX2);;
+        resultDF_DX1_DX2 = CALC.SYM_EVAL(resultDF_DX1_DX2);
         double dx1dx2 = Double.parseDouble(resultDF_DX1_DX2.toString());
 
         resultDF_DX2_DX1 = subst(resultDF_DX2_DX1, x1, x[0]);
         resultDF_DX2_DX1 = subst(resultDF_DX2_DX1, x2 , x[1]);
-        resultDF_DX2_DX1 = CALC.SYM_EVAL(resultDF_DX2_DX1);;
+        resultDF_DX2_DX1 = CALC.SYM_EVAL(resultDF_DX2_DX1);
         double dx2dx1 = Double.parseDouble(resultDF_DX2_DX1.toString());
 
         resultDF_DX2_DX2 = subst(resultDF_DX2_DX2, x1, x[0]);
         resultDF_DX2_DX2 = subst(resultDF_DX2_DX2, x2 , x[1]);
-        resultDF_DX2_DX2 = CALC.SYM_EVAL(resultDF_DX2_DX2);;
+        resultDF_DX2_DX2 = CALC.SYM_EVAL(resultDF_DX2_DX2);
         double dx2dx2 = Double.parseDouble(resultDF_DX2_DX2.toString());
 
         det = dx1dx1*dx2dx2-dx1dx2*dx2dx1;
