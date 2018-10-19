@@ -1,6 +1,6 @@
 # dfp-optimization
 
-This is an application that implements Davidon-Fletcher-Powell algorithm for function optimization. 
+This is an implementation of Davidon-Fletcher-Powell algorithm for function optimization with graphical user interface.
 
 # What language is used?
 
